@@ -1,18 +1,18 @@
 import * as mongoose from 'mongoose';
 
 export const TodoSchema = new mongoose.Schema({
-    task_name: { type: String, required: true },
-    description: { type: String, required: true },
-    due_date: { type: Date, required: true },
-    priority: { type: Number, required: true },
-    status: { type: String, required: true }
+    taskName: { type: String },
+    description: { type: String },
+    dueDate: { type: Date },
+    priority: { type: Number},
+    status: { type: String }
 });
 
 export class Todo extends mongoose.Document {
     id: string;
-    task_name: string;
+    taskName: string;
     description: string;
-    due_date: Date;
+    dueDate: Date;
     priority: number;
     status: string;
 }
